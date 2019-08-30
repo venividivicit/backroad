@@ -1,18 +1,10 @@
-import React, { Component } from "react"
-import Layout from "../components/Layout"
+import React from "react"
 import StyledHero from "../components/StyledHero"
 import { graphql } from "gatsby"
+import Layout from "../components/Layout"
 
-
-
-export default class Services extends Component {
-  render() {
-    return (
-      <Layout>
-        this is the Services page
-      </Layout>
-    )
-  }
+const Team = () => {
+  return <Layout>meet our team page</Layout>
 }
 
 export const query = graphql`
@@ -26,3 +18,5 @@ export const query = graphql`
     }
   }
 `
+
+export default Team
