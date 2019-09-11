@@ -5,8 +5,7 @@ import projects from "../../constants/projects"
 import img1 from "../../images/projects/slide.jpeg"
 import Img from "gatsby"
 
-const Projects = ({ img }) => {
-  console.log(img)
+const Projects = () => {
   return (
     <section className={styles.projects}>
       <Title title="Our" subtitle="Projects" />
