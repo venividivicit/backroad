@@ -3,13 +3,15 @@ import StyledHero from "../components/StyledHero"
 import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import Banner from "../components/Banner"
+import Contacts from '../components/Contact/Contact'
 
 const Contact = ({ data }) => {
   return (
     <Layout>
       <StyledHero img={data.backgroundFile.childImageSharp.fluid}>
-        <Banner title="Contact Us"></Banner>
+        <Banner title="Contact Us"/>
       </StyledHero>
+      <Contacts/>
     </Layout>
   )
 }

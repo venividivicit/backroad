@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Lato|Poppins");
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 
 :root {
   --primaryColor: #ffa64d;
@@ -8,7 +8,7 @@
   --mainGrey: #ececec;
   --darkGrey: #afafaf;
   --mainTransition: all 0.3s linear;
-  --mainSpacing: 4px;
+  --mainSpacing: 2px;
   --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
   --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
 }
@@ -20,7 +20,7 @@
 }
 
 body {
-  font-family: "Lato", sans-serif;
+  font-family: "Roboto", sans-serif;
   color: var(--mainBlack);
   background: var(--mainWhite);
   line-height: 1.4;
@@ -32,7 +32,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
   margin-bottom: 1.25rem;
   letter-spacing: var(--mainSpacing);
 }
@@ -44,7 +44,7 @@ a {
 }
 .defaultHero {
   min-height: calc(100vh - 62px);
-  background: linear-gradient(rgba(255, 166, 77, 0.6), rgba(0, 0, 0, 0.7)),
+  background: linear-gradient(rgba(178, 34, 34, 0.6), rgba(0, 0, 0, 0.7)),
     url("../images/kitchen.jpeg") center/cover no-repeat;
   display: flex;
   justify-content: center;
