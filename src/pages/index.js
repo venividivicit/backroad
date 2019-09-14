@@ -4,10 +4,10 @@ import Banner from "../components/Banner"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import About from "../components/Home/About"
 import Services from "../components/Home/Services"
-import Projects from '../components/Home/Projects'
+// import Projects from '../components/Home/Projects'
 import StyledHero from "../components/StyledHero"
 import { graphql } from "gatsby"
-
+import Featured from '../components/Projects/ProjectList'
 
 export default ({ data }) => {
 
@@ -28,7 +28,8 @@ export default ({ data }) => {
       </StyledHero>
       <About />
       <Services />
-      <Projects img={data.heroAssets.edges}/>
+      <Featured/>
+      {/* <Projects img={data.heroAssets.edges}/> */}
     </Layout>
   )
 }
@@ -39,17 +40,6 @@ export const query = graphql`
       childImageSharp {
         fluid(quality: 90, maxWidth: 4160) {
           ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-    heroAssets: allFile(filter: { absolutePath: { regex: "/images/projects/" } }) {
-      edges {
-        node {
-          childImageSharp {
-            fluid(quality: 90) {
-              ...GatsbyImageSharpFluid_withWebp
-            }
-          }
         }
       }
     }
