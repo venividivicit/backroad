@@ -6,6 +6,7 @@
   box-shadow: var(--darkShadow);
 }
 
+
 .img-container {
   position: relative;
   background: var(--primaryColor);

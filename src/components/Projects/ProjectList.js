@@ -1,54 +1,30 @@
-import React from "react"
-import Project from "../Projects/Project"
-import { useStaticQuery, graphql } from "gatsby"
-import Title from "../Title"
+import React, { Component } from "react"
 import styles from "../../css/items.module.css"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
+import Project from "../Projects/Project"
 
-const getFeaturedProjects = graphql`
-  query {
-    featured: allContentfulProject(filter: { ft: { eq: true } }) {
-      edges {
-        node {
-          name
-          description {
-            description
-          }
-          short
-          location {
-            lon
-            lat
-          }
-          mainPic {
-            fluid {
-              ...GatsbyContentfulFluid_tracedSVG
-            }
-          }
-          slug
-        }
-      }
-    }
+export default class ProjectList extends Component {
+  state={
+      projects:[],
+      sorted:[]
   }
-`
 
-const ProjectList = () => {
-  const response = useStaticQuery(getFeaturedProjects)
-  const projects = response.featured.edges
-
-  return (
-    <section className={styles.tours}>
-      <Title title="our" subtitle="projects" />
-      <div className={styles.center}>
-        {projects.map(({ node }) => {
-          return <Project key={node.slug} project={node} />
-        })}
-      </div>
-
-      <AniLink fade to="/projects" className="btn-primary">
-        explore
-      </AniLink>
-    </section>
-  )
+  componentDidMount(){
+      this.setState({
+          projects: this.props.projects.edges,
+          sorted: this.props.projects.edges
+      })
+  }
+  render() {
+    return (
+      <section className={styles.tours}>
+          <div className={styles.center}>
+              {
+                  this.state.sorted.map(({node})=>{
+                      return <Project key={node.slug} project={node}/>
+                  })
+              }
+          </div>
+      </section>
+    )
+  }
 }
-
-export default ProjectList

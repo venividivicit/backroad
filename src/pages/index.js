@@ -7,7 +7,7 @@ import Services from "../components/Home/Services"
 // import Projects from '../components/Home/Projects'
 import StyledHero from "../components/StyledHero"
 import { graphql } from "gatsby"
-import Featured from '../components/Projects/ProjectList'
+import Featured from '../components/Home/FeaturedList'
 
 export default ({ data }) => {
 
