@@ -31,10 +31,8 @@ const getProjects = graphql`
 
 const Projects = () => {
   const  {projects}  = useStaticQuery(getProjects)
-  const test = "hello"
-  console.log(projects);
   
-  return <ProjectList test={test} />
+  return <ProjectList projects={projects} />
 }
 
 export default Projects

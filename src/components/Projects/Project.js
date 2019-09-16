@@ -1,10 +1,10 @@
 import React from "react"
 import Img from "gatsby-image"
 import styles from "../../css/tour.module.css"
-import styles1 from '../../css/projects.module.css'
 import AniLink from "gatsby-plugin-transition-link/AniLink"
+
 const Project = ({ project }) => {
-  const { name, short, mainPic, slug, province } = project
+  const { name, mainPic, slug, province } = project
 
   return (
     <article className={styles.tour}>

@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import styles from "../../css/items.module.css"
-import Project from "../Projects/Project"
+import Project from '../Projects/Project'
 
 export default class ProjectList extends Component {
   state={
