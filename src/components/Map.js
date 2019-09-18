@@ -14,7 +14,7 @@ const AnyReactComponent = ({ text }) => <div>{text}</div>
 const GoogleMap = () => (
   <div style={{ height: '400px', width: '400px' }}>
     <GoogleMapReact
-      bootstrapURLKeys={{ key: 'AIzaSyBP2GNmwAsipYFPpLLeWjoW9_Y3aXcivu4' }}
+      bootstrapURLKeys={{ key: '' }}
       defaultCenter={defaultProps.center}
       defaultZoom={defaultProps.zoom}
     >
