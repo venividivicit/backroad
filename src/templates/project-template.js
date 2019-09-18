@@ -2,6 +2,8 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import StyledHero from "../components/StyledHero"
+import styles from "../css/template.module.css"
+// import Slider from '../components/Slider'
 
 const Template = ({ data }) => {
   const {
@@ -14,12 +16,15 @@ const Template = ({ data }) => {
 
   return (
     <Layout>
-      <StyledHero img={mainPic.fluid}/>
-        <>
-          <h1>{name}</h1>
-          <p>{description}</p>
-        </>
-      
+      <StyledHero img={mainPic.fluid} />
+      <div className={styles.template}>
+        <div className={styles.templateCenter}>
+          <h1 className={styles.header}>{name}</h1>
+          <h1 className={styles.item}>dummy text</h1>
+          <p className={styles.item}>{description}</p>
+        </div>
+      </div>
+      {/* <Slider data={mainPic.fluid}/> */}
     </Layout>
   )
 }
@@ -37,7 +42,7 @@ export const query = graphql`
       }
       mainPic {
         fluid {
-            ...GatsbyContentfulFluid_tracedSVG
+          ...GatsbyContentfulFluid_tracedSVG
         }
       }
       province

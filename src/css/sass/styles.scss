@@ -68,8 +68,8 @@ $content-background-color: #2f2f2f;
 .#{$root-element} {
   display: block;
   position: relative;
-  width: 100%;
-  max-width: 100%;
+  width: 500px;
+  max-width: 500px;
 
   &__wrapper {
     display: block;
