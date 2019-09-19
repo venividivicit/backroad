@@ -6,16 +6,27 @@
   width: 80vw;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(1fr, minmax(200px, 300px));
-  grid-template-rows: 50px 1fr;
+  grid-template-columns: 1fr;
+  grid-auto-rows: minmax(100px, auto);
   grid-gap: 15px;
 }
 
-.item{
-    background-color: aqua;
+.item {
+  background-color: aqua;
 }
 
-.header{
+
+.kitchen {
+  width: 100%;
+  object-fit: contain;
+}
+
+@media (min-width: 768px) {
+  .template-center {
+    grid-template-columns: 1fr 1fr;
+  }
+  .header{
     grid-column-start: 1;
     grid-column-end: 3;
+  }
 }

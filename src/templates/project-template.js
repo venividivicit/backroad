@@ -4,6 +4,8 @@ import Layout from "../components/Layout"
 import StyledHero from "../components/StyledHero"
 import styles from "../css/template.module.css"
 // import Slider from '../components/Slider'
+import dummy from '../images/dummymap.png'
+import kitchen from '../images/kitchen.jpeg'
 
 const Template = ({ data }) => {
   const {
@@ -20,8 +22,9 @@ const Template = ({ data }) => {
       <div className={styles.template}>
         <div className={styles.templateCenter}>
           <h1 className={styles.header}>{name}</h1>
-          <h1 className={styles.item}>dummy text</h1>
+          <img className={styles.kitchen} src={kitchen} alt="kitchen"/>
           <p className={styles.item}>{description}</p>
+          <img src={dummy} alt="map"/>
         </div>
       </div>
       {/* <Slider data={mainPic.fluid}/> */}
