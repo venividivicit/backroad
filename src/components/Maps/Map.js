@@ -10,11 +10,10 @@ const defaultProps = {
   zoom: 12,
 }
 
-
 const GoogleMap = () => (
   <div style={{ height: "400px", width: "400px" }}>
     <GoogleMapReact
-      bootstrapURLKeys={{ key: "AIzaSyCILCY-P4ZorWrJ8AS-cYzeINQElSRWfDg" }}
+      bootstrapURLKeys={{ key: process.env.MAPS_API_KEY }}
       defaultCenter={defaultProps.center}
       defaultZoom={defaultProps.zoom}
     >
