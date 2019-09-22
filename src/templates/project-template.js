@@ -6,6 +6,7 @@ import styles from "../css/template.module.css"
 // import Slider from '../components/Slider'
 import dummy from '../images/dummymap.png'
 import kitchen from '../images/kitchen.jpeg'
+import Map from '../components/Maps/Map'
 
 const Template = ({ data }) => {
   const {
@@ -24,7 +25,7 @@ const Template = ({ data }) => {
           <h1 className={styles.header}>{name}</h1>
           <img className={styles.kitchen} src={kitchen} alt="kitchen"/>
           <p className={styles.item}>{description}</p>
-          <img src={dummy} alt="map"/>
+          <Map/>
         </div>
       </div>
       {/* <Slider data={mainPic.fluid}/> */}
