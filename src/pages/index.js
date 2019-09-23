@@ -4,15 +4,17 @@ import Banner from "../components/Banner"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import About from "../components/Home/About"
 import Services from "../components/Home/Services"
-// import Projects from '../components/Home/Projects'
 import StyledHero from "../components/StyledHero"
 import { graphql } from "gatsby"
 import Featured from '../components/Home/FeaturedList'
+import Seo from '../components/Seo'
+
 
 export default ({ data }) => {
 
   return (
     <Layout>
+      <Seo title="Home Page" description="this is home page"/>
       <StyledHero home="true" img={data.backgroundFile.childImageSharp.fluid}>
         <Banner
           title="Construction Services"

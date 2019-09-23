@@ -4,6 +4,7 @@ import StyledHero from "../components/StyledHero"
 import { graphql } from "gatsby"
 import Banner from "../components/Banner"
 import Map from "../components/Maps/Map"
+import Slider from '../components/Slider/Slider'
 
 const Services = ({ data }) => {
   return (

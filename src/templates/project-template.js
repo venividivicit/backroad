@@ -3,18 +3,17 @@ import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import StyledHero from "../components/StyledHero"
 import styles from "../css/template.module.css"
-// import Slider from '../components/Slider'
-import dummy from '../images/dummymap.png'
-import kitchen from '../images/kitchen.jpeg'
-import Map from '../components/Maps/Map'
+import Map from "../components/Maps/Map"
+import Slider from "../components/Slider/Slider"
 
 const Template = ({ data }) => {
   const {
     name,
     description: { description },
-    location: { lat, lon },
-    province,
+    //location: { lat, lon },
+    //province,
     mainPic,
+    slider,
   } = data.contentfulProject
 
   return (
@@ -23,9 +22,9 @@ const Template = ({ data }) => {
       <div className={styles.template}>
         <div className={styles.templateCenter}>
           <h1 className={styles.header}>{name}</h1>
-          <img className={styles.kitchen} src={kitchen} alt="kitchen"/>
+          <Slider img={slider} />
           <p className={styles.item}>{description}</p>
-          <Map/>
+          <Map />
         </div>
       </div>
       {/* <Slider data={mainPic.fluid}/> */}
@@ -45,6 +44,11 @@ export const query = graphql`
         lon
       }
       mainPic {
+        fluid {
+          ...GatsbyContentfulFluid_tracedSVG
+        }
+      }
+      slider {
         fluid {
           ...GatsbyContentfulFluid_tracedSVG
         }

@@ -12,6 +12,9 @@ module.exports = {
   siteMetadata: {
     title: "Construction Company",
     description: "We build houses",
+    facebook:"muhammad.bobojonov.9",
+    instagram:"civiva",
+    siteUrl:"https://compassionate-hamilton-8a07af.netlify.com"
   },
   plugins: [
     `gatsby-plugin-styled-components`,
@@ -19,6 +22,7 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-transition-link`,
     `gatsby-plugin-sass`,
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
