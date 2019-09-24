@@ -48,6 +48,7 @@ export default function Navbar() {
                 href={item.url}
                 target="_blank"
                 rel="noopener noreferrer"
+                className={item.name}
               >
                 {item.icon}
               </a>
