@@ -4,7 +4,10 @@ import StyledHero from "../components/StyledHero"
 import { graphql } from "gatsby"
 import Banner from "../components/Banner"
 import Map from "../components/Maps/Map"
-import Slider from '../components/Slider/Slider'
+import Slider from '../components/Slider/SliderTwo'
+
+
+
 
 const Services = ({ data }) => {
   return (
@@ -13,6 +16,7 @@ const Services = ({ data }) => {
         <Banner title="Services"></Banner>
       </StyledHero>
       <Map />
+      <Slider image={data.images.edges}/>
     </Layout>
   )
 }
@@ -25,6 +29,17 @@ export const query = graphql`
       childImageSharp {
         fluid(quality: 90, maxWidth: 4160) {
           ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    images: allContentfulProject {
+      edges {
+        node {
+          slider {
+            fluid {
+              ...GatsbyContentfulFluid_tracedSVG
+            }
+          }
         }
       }
     }

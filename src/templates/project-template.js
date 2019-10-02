@@ -4,7 +4,7 @@ import Layout from "../components/Layout"
 import StyledHero from "../components/StyledHero"
 import styles from "../css/template.module.css"
 import Map from "../components/Maps/Map"
-import Slider from "../components/Slider/Slider"
+
 
 const Template = ({ data }) => {
   const {
@@ -22,7 +22,7 @@ const Template = ({ data }) => {
       <div className={styles.template}>
         <div className={styles.templateCenter}>
           <h1 className={styles.header}>{name}</h1>
-          <Slider img={slider} />
+         
           <p className={styles.item}>{description}</p>
           <Map />
         </div>
